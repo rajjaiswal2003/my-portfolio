@@ -10,6 +10,11 @@
   --card-bg: rgba(30, 41, 59, 0.4);
   --font-main: 'Inter', sans-serif;
   --font-heading: 'Outfit', sans-serif;
+
+  /* Mobile Fluid Typography */
+  --h1-size: clamp(2.5rem, 10vw, 5rem);
+  --h2-size: clamp(1.5rem, 6vw, 2.5rem);
+  --p-size: clamp(1rem, 4vw, 1.2rem);
 }
 
 * {
@@ -27,7 +32,10 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   font-family: var(--font-heading);
   font-weight: 700;
   letter-spacing: -0.02em;
@@ -72,14 +80,36 @@ section {
 
 @media (max-width: 768px) {
   section {
-    padding: 6rem 0;
+    padding: 4rem 1.5rem;
+  }
+
+  .container {
+    padding: 0 1rem;
+  }
+
+  .mobile-stack {
+    flex-direction: column !important;
+    text-align: center !important;
+  }
+}
+
+@media (max-width: 480px) {
+  section {
+    padding: 3rem 1rem;
   }
 }
 
 /* Animations */
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .animate-fade-in {

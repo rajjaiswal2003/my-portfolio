@@ -25,8 +25,12 @@ const Projects = () => {
     return (
         <section id="projects">
             <div className="container">
-                <h2 style={{ fontSize: '2.5rem', marginBottom: '3rem', textAlign: 'center' }}>Featured Projects</h2>
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', gap: '2rem' }}>
+                <h2 style={{ fontSize: 'var(--h2-size)', marginBottom: '3rem', textAlign: 'center' }}>Featured Projects</h2>
+                <div style={{
+                    display: 'grid',
+                    gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 350px), 1fr))',
+                    gap: '2rem'
+                }}>
                     {projects.map((project, index) => (
                         <div key={index} className="glass" style={{ padding: '2rem', borderRadius: '1.5rem', display: 'flex', flexDirection: 'column', transition: 'transform 0.3s ease' }}>
                             <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '1rem' }}>

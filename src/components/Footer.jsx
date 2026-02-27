@@ -2,13 +2,13 @@ import React from 'react';
 
 const Footer = ({ onEmailClick }) => {
     return (
-        <footer className="container" style={{ padding: '4rem 0', borderTop: '1px solid var(--glass-border)', marginTop: '4rem' }}>
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '2rem' }}>
-                <div>
+        <footer className="container footer-section" style={{ padding: '4rem 0', borderTop: '1px solid var(--glass-border)', marginTop: '4rem' }}>
+            <div className="footer-content" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '2rem' }}>
+                <div className="footer-brand">
                     <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '0.5rem' }}>Raj Jaiswal</h3>
                     <p style={{ color: 'var(--text-secondary)' }}>Building the future with AI.</p>
                 </div>
-                <div style={{ display: 'flex', gap: '2rem' }}>
+                <div className="footer-links" style={{ display: 'flex', gap: '2rem' }}>
                     <button
                         onClick={onEmailClick}
                         style={{
@@ -28,6 +28,13 @@ const Footer = ({ onEmailClick }) => {
             <div style={{ marginTop: '3rem', textAlign: 'center', color: 'var(--text-secondary)', fontSize: '0.9rem', opacity: 0.6 }}>
                 © {new Date().getFullYear()} Raj Jaiswal. All rights reserved.
             </div>
+
+            <style>{`
+        @media (max-width: 768px) {
+          .footer-content { flex-direction: column !important; text-align: center !important; }
+          .footer-links { justify-content: center !important; gap: 1.5rem !important; }
+        }
+      `}</style>
         </footer>
     );
 };

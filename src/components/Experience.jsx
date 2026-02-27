@@ -26,18 +26,18 @@ const Experience = () => {
     return (
         <section id="experience">
             <div className="container">
-                <h2 style={{ fontSize: '2.5rem', marginBottom: '3rem', textAlign: 'center' }}>Experience</h2>
+                <h2 style={{ fontSize: 'var(--h2-size)', marginBottom: '3rem', textAlign: 'center' }}>Experience</h2>
                 <div style={{ display: 'grid', gap: '2rem' }}>
                     {experiences.map((exp, index) => (
-                        <div key={index} className="glass" style={{ padding: '2.5rem', borderRadius: '1.5rem' }}>
+                        <div key={index} className="glass" style={{ padding: 'clamp(1.5rem, 5vw, 2.5rem)', borderRadius: '1.5rem' }}>
                             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '1rem', marginBottom: '1.5rem' }}>
                                 <div>
-                                    <h3 style={{ fontSize: '1.5rem', color: 'var(--text-primary)' }}>{exp.role}</h3>
+                                    <h3 style={{ fontSize: '1.4rem', color: 'var(--text-primary)' }}>{exp.role}</h3>
                                     <p style={{ color: 'var(--accent-blue)', fontWeight: 600 }}>{exp.company}</p>
                                 </div>
-                                <span style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', background: 'rgba(255,255,255,0.05)', padding: '0.4rem 1rem', borderRadius: '1rem' }}>{exp.period}</span>
+                                <span style={{ color: 'var(--text-secondary)', fontSize: '0.85rem', background: 'rgba(255,255,255,0.05)', padding: '0.4rem 1rem', borderRadius: '1rem' }}>{exp.period}</span>
                             </div>
-                            <ul style={{ color: 'var(--text-secondary)', paddingLeft: '1.2rem', display: 'grid', gap: '0.75rem' }}>
+                            <ul style={{ color: 'var(--text-secondary)', paddingLeft: '1.1rem', fontSize: '0.95rem', display: 'grid', gap: '0.75rem' }}>
                                 {exp.desc.map((item, i) => <li key={i}>{item}</li>)}
                             </ul>
                         </div>
