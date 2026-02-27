@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Navbar = () => {
+const Navbar = ({ onEmailClick }) => {
   return (
     <nav className="glass" style={{
       position: 'fixed',
@@ -8,12 +8,12 @@ const Navbar = () => {
       left: '50%',
       transform: 'translateX(-50%)',
       width: '90%',
-      maxWidth: '600px',
+      maxWidth: '650px',
       padding: '0.75rem 2rem',
       borderRadius: '2rem',
       display: 'flex',
       justifyContent: 'center',
-      gap: '2rem',
+      gap: '1.5rem',
       zIndex: 1000,
       fontSize: '0.9rem',
       fontWeight: 500
@@ -22,7 +22,19 @@ const Navbar = () => {
       <a href="#experience" style={{ opacity: 0.8 }}>Experience</a>
       <a href="#projects" style={{ opacity: 0.8 }}>Projects</a>
       <a href="#skills" style={{ opacity: 0.8 }}>Skills</a>
-      <a href="mailto:raj.jaiswal1122003@gmail.com" style={{ opacity: 0.8, color: 'var(--accent-blue)' }}>Contact</a>
+      <button
+        onClick={onEmailClick}
+        style={{
+          background: 'none',
+          border: 'none',
+          color: 'var(--accent-blue)',
+          opacity: 0.9,
+          fontWeight: 600,
+          cursor: 'pointer',
+          fontSize: '0.9rem',
+          padding: 0
+        }}
+      >Contact</button>
     </nav>
   );
 };

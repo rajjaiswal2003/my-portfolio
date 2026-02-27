@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import HireMeModal from './HireMeModal';
 
-const Hero = () => {
-    const [isModalOpen, setIsModalOpen] = useState(false);
+const Hero = ({ onEmailClick }) => {
+    const [isHireModalOpen, setIsHireModalOpen] = useState(false);
 
     return (
         <section id="about" className="animate-fade-in" style={{
@@ -29,7 +29,7 @@ const Hero = () => {
                         transform: 'rotate(-3deg)'
                     }}>
                         <img
-                            src="/linkedin_photo.jpg"
+                            src="/profile.png"
                             alt="Raj Jaiswal"
                             style={{
                                 width: '100%',
@@ -67,7 +67,7 @@ const Hero = () => {
                     </p>
                     <div style={{ display: 'flex', gap: '1.5rem', alignItems: 'center' }}>
                         <button
-                            onClick={() => setIsModalOpen(true)}
+                            onClick={() => setIsHireModalOpen(true)}
                             className="glass"
                             style={{
                                 padding: '1rem 2rem',
@@ -79,14 +79,25 @@ const Hero = () => {
                             }}
                         >Hire Me</button>
                         <div style={{ display: 'flex', gap: '1.2rem' }}>
-                            <a href="mailto:raj.jaiswal1122003@gmail.com" style={{ opacity: 0.8, fontWeight: 500 }}>Email</a>
+                            <button
+                                onClick={onEmailClick}
+                                style={{
+                                    background: 'none',
+                                    border: 'none',
+                                    color: 'var(--text-primary)',
+                                    opacity: 0.8,
+                                    fontWeight: 500,
+                                    padding: 0,
+                                    cursor: 'pointer'
+                                }}
+                            >Email</button>
                             <a href="https://github.com/rajjaiswal2003" target="_blank" rel="noopener noreferrer" style={{ opacity: 0.8, fontWeight: 500 }}>GitHub</a>
                             <a href="https://www.linkedin.com/in/raj-jaiswal2003/" target="_blank" rel="noopener noreferrer" style={{ opacity: 0.8, fontWeight: 500 }}>LinkedIn</a>
                         </div>
                     </div>
                 </div>
             </div>
-            <HireMeModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+            <HireMeModal isOpen={isHireModalOpen} onClose={() => setIsHireModalOpen(false)} />
         </section>
     );
 };
