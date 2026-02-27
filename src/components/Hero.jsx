@@ -1,6 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
+import HireMeModal from './HireMeModal';
 
 const Hero = () => {
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
     return (
         <section id="about" className="animate-fade-in" style={{
             minHeight: '90vh',
@@ -63,14 +66,18 @@ const Hero = () => {
                         Currently engineering AI ecosystems at Amar Ujala.
                     </p>
                     <div style={{ display: 'flex', gap: '1.5rem', alignItems: 'center' }}>
-                        <a href="mailto:raj.jaiswal1122003@gmail.com" className="glass" style={{
-                            padding: '1rem 2rem',
-                            borderRadius: '1rem',
-                            fontWeight: 700,
-                            background: 'var(--accent-gradient)',
-                            border: 'none',
-                            color: 'white'
-                        }}>Hire Me</a>
+                        <button
+                            onClick={() => setIsModalOpen(true)}
+                            className="glass"
+                            style={{
+                                padding: '1rem 2rem',
+                                borderRadius: '1rem',
+                                fontWeight: 700,
+                                background: 'var(--accent-gradient)',
+                                border: 'none',
+                                color: 'white'
+                            }}
+                        >Hire Me</button>
                         <div style={{ display: 'flex', gap: '1.2rem' }}>
                             <a href="https://github.com/rajjaiswal2003" target="_blank" rel="noopener noreferrer" style={{ opacity: 0.8, fontWeight: 500 }}>GitHub</a>
                             <a href="https://www.linkedin.com/in/raj-jaiswal2003/" target="_blank" rel="noopener noreferrer" style={{ opacity: 0.8, fontWeight: 500 }}>LinkedIn</a>
@@ -78,6 +85,7 @@ const Hero = () => {
                     </div>
                 </div>
             </div>
+            <HireMeModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
         </section>
     );
 };
