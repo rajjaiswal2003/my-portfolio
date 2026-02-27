@@ -8,8 +8,8 @@ const Footer = () => {
                 <p style={{ color: 'var(--text-secondary)', marginBottom: '2rem' }}>Raj Jaiswal • Data Scientist & AI Engineer</p>
                 <div style={{ display: 'flex', justifyContent: 'center', gap: '2rem', marginBottom: '2rem' }}>
                     <a href="mailto:raj.jaiswal1122003@gmail.com" style={{ opacity: 0.7 }}>Email</a>
-                    <a href="#" style={{ opacity: 0.7 }}>LinkedIn</a>
-                    <a href="#" style={{ opacity: 0.7 }}>GitHub</a>
+                    <a href="https://www.linkedin.com/in/raj-jaiswal2003/" target="_blank" rel="noopener noreferrer" style={{ opacity: 0.7 }}>LinkedIn</a>
+                    <a href="https://github.com/rajjaiswal2003" target="_blank" rel="noopener noreferrer" style={{ opacity: 0.7 }}>GitHub</a>
                 </div>
                 <p style={{ fontSize: '0.8rem', color: 'var(--text-secondary)', opacity: 0.5 }}>
                     © {new Date().getFullYear()} Raj Jaiswal. Built with React & Passion.
