@@ -79,6 +79,7 @@ const Hero = () => {
                             }}
                         >Hire Me</button>
                         <div style={{ display: 'flex', gap: '1.2rem' }}>
+                            <a href="mailto:raj.jaiswal1122003@gmail.com" style={{ opacity: 0.8, fontWeight: 500 }}>Email</a>
                             <a href="https://github.com/rajjaiswal2003" target="_blank" rel="noopener noreferrer" style={{ opacity: 0.8, fontWeight: 500 }}>GitHub</a>
                             <a href="https://www.linkedin.com/in/raj-jaiswal2003/" target="_blank" rel="noopener noreferrer" style={{ opacity: 0.8, fontWeight: 500 }}>LinkedIn</a>
                         </div>

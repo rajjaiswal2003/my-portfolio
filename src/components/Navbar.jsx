@@ -22,6 +22,7 @@ const Navbar = () => {
       <a href="#experience" style={{ opacity: 0.8 }}>Experience</a>
       <a href="#projects" style={{ opacity: 0.8 }}>Projects</a>
       <a href="#skills" style={{ opacity: 0.8 }}>Skills</a>
+      <a href="mailto:raj.jaiswal1122003@gmail.com" style={{ opacity: 0.8, color: 'var(--accent-blue)' }}>Contact</a>
     </nav>
   );
 };
